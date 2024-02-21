@@ -3,8 +3,8 @@
     <div class="content">
       <h2 class="txt">As featured in</h2>
       <div class="logo-content">
-        <div class="logo" *ngFor="let img of featured; let i = index">
-          <img [src]="img.img" alt="" [class.scale-img]="i == 4" />
+        <div class="logo" *ngFor="let img of featured; let i = index" [class.scale-img1]="i == 5">
+          <img [src]="img.img" alt="" />
         </div>
       </div>
     </div>
@@ -47,8 +47,6 @@
             </div>
           </div>
           <div class="g2">
-            
-
             <div class="contact">
               <div class="socials" *ngIf="contacts && contacts.length > 0">
                 <ng-container

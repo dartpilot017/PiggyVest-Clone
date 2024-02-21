@@ -1,0 +1,88 @@
+<div class="footer">
+  <div class="inner-container">
+    <div class="content">
+      <h2 class="txt">As featured in</h2>
+      <div class="logo-content">
+        <div class="logo" *ngFor="let img of featured; let i = index">
+          <img [src]="img.img" alt="" [class.scale-img]="i == 4" />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="top-content">
+          <div class="g1">
+            <div class="container">
+              <a href="" class="logo">
+                <img src="../../../assets/logo.svg" alt="" />
+              </a>
+              <div href="" class="compliance">
+                <img src="../../../assets/footer/compliance.png" alt="" />
+              </div>
+            </div>
+            <div class="container">
+              <h3 class="txt">Products</h3>
+              <ng-container *ngFor="let txt of products">
+                <h4 class="text">
+                  {{ txt.text }}
+                </h4>
+              </ng-container>
+            </div>
+            <div class="container">
+              <h3 class="txt">Company</h3>
+              <ng-container *ngFor="let txt of company">
+                <h4 class="text">
+                  {{ txt.text }}
+                </h4>
+              </ng-container>
+            </div>
+            <div class="container">
+              <h3 class="txt">Legal</h3>
+              <ng-container *ngFor="let txt of legal">
+                <h4 class="text">
+                  {{ txt.text }}
+                </h4>
+              </ng-container>
+            </div>
+          </div>
+          <div class="g2">
+            
+
+            <div class="contact">
+              <div class="socials" *ngIf="contacts && contacts.length > 0">
+                <ng-container
+                  *ngFor="let social of contacts[0]?.social; let i = index"
+                >
+                  <img [src]="social.img" alt="{{ i }}" />
+                </ng-container>
+              </div>
+              <div class="address" *ngIf="contacts && contacts.length > 0">
+                <ng-container
+                  *ngFor="let cont of contacts[0]?.contact; let i = index"
+                >
+                  <h4 class="text">
+                    {{ cont.text }}
+                  </h4>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-content">
+          <div class="content">
+            <h4
+              class="text"
+              *ngFor="let txt of bottom; let i = index"
+              [class.text-style]="i == 2"
+              [class.text-width]="i == 1"
+            >
+              {{ txt.text }}
+            </h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

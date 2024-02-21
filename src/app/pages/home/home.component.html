@@ -1,0 +1,285 @@
+<div class="padding-top">
+  <div class="inner-container">
+    <div class="top">
+      <div class="grid-container">
+        <div class="save-way">
+          <h1 class="pgg-h1">The Better Way to Save & Invest</h1>
+          <p class="text">
+            Piggyvest helps over 4 million customers achieve their financial
+            goals by helping them save and invest with ease.
+          </p>
+          <div class="btn-container">
+            <div class="btn-filled">
+              <div class="content">
+                <img src="../../../assets/home/apple-logo.svg" alt="" />
+                <p>Get on iPhone</p>
+              </div>
+            </div>
+            <div class="btn-filled">
+              <div class="content">
+                <img src="../../../assets/home/play-store-logo.svg" alt="" />
+                <p>Get on Android</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-overlay">
+            <div class="main-card">
+              <img src="../../../assets/home/she.avif" alt="" />
+            </div>
+            <div class="safe-lock">
+              <img src="../../../assets/home/safe-lock.avif" alt="" />
+            </div>
+            <div class="flex-naira">
+              <img src="../../../assets/home/flex-naira.avif" alt="" />
+            </div>
+            <div class="target">
+              <img src="../../../assets/home/target.avif" alt="" />
+            </div>
+            <div class="investify">
+              <img src="../../../assets/home/investify.avif" alt="" />
+            </div>
+            <div class="piggy">
+              <img src="../../../assets/home/piggy.avif" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="security-grid">
+        <div class="g1">
+          <img src="../../../assets/home/securitylock.svg" alt="" />
+        </div>
+        <div class="g2">
+          <h2 class="pgg-h1">Your security is our priority</h2>
+          <p class="text">
+            PiggyVest uses the highest level of Internet Security and it is
+            secured by 256 bits SSL security encryption to ensure that your
+            information is comepletely protected from fraud.
+          </p>
+          <div class="icon-text">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 10L20 15L15 20"
+                stroke="#122231"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20"
+                stroke="#122231"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <h3>More on our security measures</h3>
+          </div>
+        </div>
+      </div>
+      <div class="grid-section">
+        <div class="text-align">
+          <h1 class="pgg-h1">5 ways to build your savings</h1>
+          <p class="text">
+            Earn 5%-15% when you save with any of these PiggyVest plans.
+          </p>
+        </div>
+        <div class="card-section" *ngFor="let content of cardItems">
+          <div
+            class="card"
+            [ngStyle]="{ background: content.isHovered ? content.bg : '#fff' }"
+            (mouseenter)="onCardMouseEnter(content)"
+            (mouseleave)="onCardMouseLeave(content)"
+          >
+            <div class="text-container">
+              <h1
+                class="pgg-h1"
+                [ngStyle]="{ color: content.isHovered ? '#fff' : content.bg }"
+                (mouseenter)="onCardMouseEnter(content)"
+                (mouseleave)="onCardMouseLeave(content)"
+              >
+                {{ content.header }}
+              </h1>
+              <p
+                class="text"
+                [ngStyle]="{ color: content.isHovered ? '#fff' : '#0d1925' }"
+                (mouseenter)="onCardMouseEnter(content)"
+                (mouseleave)="onCardMouseLeave(content)"
+              >
+                {{ content.paragraph }}
+              </p>
+            </div>
+            <div class="icon-text">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  [ngStyle]="{
+                    stroke: content.isHovered ? '#fff' : content.bg
+                  }"
+                  (mouseenter)="onCardMouseEnter(content)"
+                  (mouseleave)="onCardMouseLeave(content)"
+                  d="M15 10L20 15L15 20"
+                  stroke="#122231"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  [ngStyle]="{
+                    stroke: content.isHovered ? '#fff' : content.bg
+                  }"
+                  (mouseenter)="onCardMouseEnter(content)"
+                  (mouseleave)="onCardMouseLeave(content)"
+                  d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20"
+                  stroke="#122231"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <h3
+                [ngStyle]="{ color: content.isHovered ? '#fff' : content.bg }"
+                (mouseenter)="onCardMouseEnter(content)"
+                (mouseleave)="onCardMouseLeave(content)"
+              >
+                {{ content.bottom }}
+              </h3>
+            </div>
+            <div class="hover-img">
+              <img [src]="content.imgPATH" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mid">
+    <div class="inner-container">
+      <div class="mid-content">
+        <div class="text-content">
+          <h1 class="pgg-h1">Diverse ways to Invest</h1>
+          <p class="text">
+            Grow your money and invest for your future confidently.
+          </p>
+        </div>
+        <div class="img-container grid-section">
+          <div class="g1">
+            <div class="text-container">
+              <h1 class="pgg-h1">Earn Up to 25% returns</h1>
+              <p class="text">
+                Invest securely and confidently on the go. Grow your money
+                confidently by investing in pre-vetted investment
+                opportunities.zz
+              </p>
+            </div>
+            <div class="icon-text">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 10L20 15L15 20"
+                  stroke="#122231"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20"
+                  stroke="#122231"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <h3>Learn about investments</h3>
+            </div>
+          </div>
+          <div class="g1">
+            <img src="../../../assets/home/invest.avif" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-container">
+    <div class="bottom">
+      <!-- <div class="inner-container"> -->
+      <div class="mid-content inner-container">
+        <div class="text-content">
+          <h1 class="pgg-h1">Meet Our Saver of the Month</h1>
+          <p class="text">
+            Every month, we shine a spotlight on one saver, asking them about
+            their savings culture and how piggyvest has helped them.
+          </p>
+        </div>
+        <div class="img-container">
+          <iframe
+            width="791"
+            height="445"
+            src="https://www.youtube.com/embed/u_MWMfEi_Zw"
+            title="Piggyvest Saver Of The Month"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="grid-section">
+        <img src="../../../assets/home/stories.png" alt="" />
+        <div class="text-content">
+          <h1 class="pgg-h1">
+            Join 4+ million people who save and invest with us
+          </h1>
+          <div class="btn-container">
+            <div class="btn-outlined">
+              <div class="content">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37"
+                  height="46"
+                  viewBox="0 0 37 46"
+                  fill="none"
+                >
+                  <path
+                    d="M25.1989 7.37555C26.7549 5.40525 27.8281 2.72006 27.5264 0C25.2722 0.104618 22.4534 1.57798 20.8285 3.50469C19.3932 5.20473 18.1045 7.99017 18.4407 10.6056C20.975 10.7974 23.574 9.31533 25.1989 7.37555Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M30.9055 24.4632C30.8495 18.6526 35.6078 15.8236 35.8277 15.6928C33.1338 11.7173 28.9573 11.1768 27.4876 11.1332C23.9835 10.7627 20.5828 13.2604 18.7984 13.2604C16.9752 13.2604 14.2211 11.1724 11.26 11.2335C7.44127 11.2945 3.87249 13.5307 1.91571 16.9961C-2.11856 24.0709 0.889899 34.4629 4.76038 40.182C6.69993 42.9806 8.95842 46.1104 11.9195 45.997C14.8159 45.875 15.8977 44.1313 19.3932 44.1313C22.8585 44.1313 23.8757 45.997 26.8971 45.9273C30.0047 45.875 31.9615 43.1157 33.8278 40.2866C36.069 37.0784 36.9655 33.918 37 33.7568C36.9267 33.7306 30.9658 31.429 30.9055 24.4632Z"
+                    fill="white"
+                  />
+                </svg>
+                <p>Get on iPhone</p>
+              </div>
+            </div>
+            <div class="btn-outlined">
+              <div class="content">
+                <img src="../../../assets/home/play-store-logo.svg" alt="" />
+                <p>Get on Android</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="colored"></div>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>

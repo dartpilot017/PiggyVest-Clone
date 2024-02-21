@@ -1,0 +1,83 @@
+<nav>
+  <div class="inner-container">
+    <div class="container">
+      <a href="" class="logo">
+        <img src="../../../assets/logo.svg" alt="" />
+      </a>
+      <!-- hamburger -->
+      <div class="hamburger" (click)="toggleNavbar()">
+        <!-- open -->
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          *ngIf="!isNavbarOpen"
+        >
+          <path
+            d="M4 16H28"
+            stroke="#1d1d1d"
+            stroke-width="3"
+            stroke-linecap="none"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 8H28"
+            stroke="#1d1d1d"
+            stroke-width="3"
+            stroke-linecap="none"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 24H28"
+            stroke="#1d1d1d"
+            stroke-width="3"
+            stroke-linecap="none"
+            stroke-linejoin="round"
+          />
+        </svg>
+  
+        <!-- close -->
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          *ngIf="isNavbarOpen"
+        >
+          <path
+            d="M8 25.3335L24.9706 8.36293"
+            stroke="#1d1d1d"
+            stroke-width="3"
+            stroke-linecap="none"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M8 8.00049L24.9706 24.9711"
+            stroke="#1d1d1d"
+            stroke-width="3"
+            stroke-linecap="none"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="content-container" [ngClass]="{ open: isNavbarOpen }">
+      <div class="nav-contents">
+        <a
+          *ngFor="let item of navItems"
+          class="nav-link"
+          (click)="handleNavItemAction(item)"
+          >{{ item.name }}</a
+        >
+        <div class="btn-container">
+          <div class="btn-outlined">Sign in</div>
+          <div class="btn-filled">Create free account</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

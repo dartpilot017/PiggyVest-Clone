@@ -1,0 +1,584 @@
+@import "../../../styles.scss";
+
+.padding-top {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
+  background: $piggy-bg-color;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+}
+
+.mid {
+  display: flex;
+  width: 100%;
+  background: #fff;
+}
+
+.mid-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 0;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: center;
+    text-align: center;
+  }
+
+  .pgg-h1 {
+    width: 100%;
+    font-size: 3rem;
+  }
+
+  .text {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}
+
+.grid-section,
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 9% 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.save-way {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pgg-h1,
+h3 {
+  color: $piggy-black-text;
+  width: 70%;
+  font-weight: 100 !important;
+  font-family: $piggy-font-family-bold;
+  font-size: 2.5rem;
+}
+
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  width: 74%;
+  font-family: $piggy-font-family;
+  font-size: 1.3rem;
+}
+
+.text-align {
+  @extend .save-way;
+  justify-content: flex-start;
+  padding-top: 25%;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+
+  .pgg-h1 {
+    width: 50%;
+  }
+  .text {
+    width: 50%;
+  }
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.card-overlay {
+  display: block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  animation: moveUpDown 2.5s infinite alternate;
+  width: 100%;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(5%); /* Adjust the distance you want it to move up */
+  }
+}
+
+.main-card {
+  display: flex;
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+.safe-lock,
+.flex-naira,
+.target,
+.investify,
+.piggy {
+  display: flex;
+  width: 35%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.safe-lock {
+  top: 30%;
+  left: 8%;
+}
+
+.flex-naira {
+  top: 73%;
+  left: 8%;
+}
+
+.investify {
+  top: 73%;
+  left: 80%;
+}
+
+.target {
+  top: 23%;
+  left: 78%;
+}
+
+.piggy {
+  top: 98%;
+  left: 50%;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+.btn-filled,
+.btn-outlined {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  top: 0.5px;
+
+  &:hover {
+    cursor: pointer;
+    top: -5px;
+    transform: translateY(-5px);
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    img,
+    svg {
+      width: 13%;
+      height: 100%;
+      path {
+        fill: black;
+      }
+    }
+  }
+}
+
+.security-grid {
+  display: flex;
+  width: 100%;
+
+  gap: 1.5rem;
+
+  padding: 7% 0;
+
+  align-items: center;
+
+  .g1 {
+    display: flex;
+    width: 10%;
+    height: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .g2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .pgg-h1 {
+      font-size: 1.3rem;
+    }
+
+    .text {
+      font-size: 0.93rem;
+      width: 60%;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+.icon-text {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2.5rem 2rem 2.5rem;
+  background: #fff;
+
+  align-items: start;
+  justify-content: end;
+  overflow: hidden;
+
+  position: relative;
+
+  border-radius: 1.5rem;
+  border: 0.01rem solid #eaeef3;
+  gap: 11rem;
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pgg-h1 {
+    font-size: 2rem;
+    width: 100%;
+    color: rgb(0, 51, 153);
+  }
+
+  .text {
+    font-size: 1.2rem;
+    width: 60%;
+  }
+
+  .icon-text {
+    align-items: flex-start;
+
+    svg {
+      path {
+        stroke: rgb(0, 51, 153);
+      }
+    }
+    h3 {
+      padding-top: 1%;
+      width: 100%;
+      font-family: $piggy-font-family;
+      color: rgb(0, 51, 153);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: #{hoverBgColor} !important;
+
+    .pgg-h1 {
+      color: #fff;
+    }
+    .text {
+      color: #fff;
+    }
+
+    .hover-img {
+      display: flex;
+      transform: translate(-50%, -50%);
+      top: 77%;
+      left: 76%;
+    }
+
+    .icon-text {
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+      h3 {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.hover-img {
+  display: flex;
+  width: 41%;
+  position: absolute;
+  transform: translate(0%, 0%);
+
+  top: 100%;
+  left: 94%;
+
+  transition: transform 0.7s ease;
+
+  img {
+    width: 100%;
+  }
+}
+
+.img-container {
+  display: flex;
+  // width: 100%;
+  padding: 4rem 3rem 0rem 3rem;
+  border-radius: 2rem;
+
+  background: #7913e5;
+
+  .g1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // justify-content: center;
+    gap: 10rem;
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .pgg-h1 {
+        color: #fff;
+        font-size: 2.1rem;
+      }
+
+      .text {
+        color: #fed6f1;
+        font-size: 1.15rem;
+        width: 50%;
+      }
+    }
+
+    .icon-text {
+      padding-bottom: 3rem;
+
+      align-items: flex-start;
+      justify-content: flex-start;
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+      h3 {
+        color: #fff;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  // width: 85%;
+  margin: auto;
+
+  .img {
+    width: 90%;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    padding: 0 0 5% 0;
+  }
+
+  .img-container {
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 1.1%;
+
+    iframe {
+      border-radius: 1.4rem;
+    }
+  }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pgg-h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-filled,
+  .btn-outlined {
+    font-size: 0.75rem;
+    align-items: center;
+  }
+}
+
+.colored {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  background: rgba(242, 248, 244, 0.9);
+}
+
+@media screen and (max-width: $tablet-width) {
+  .inner-container {
+    max-width: 90%;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .save-way {
+    align-items: center;
+    text-align: center;
+    width: 73%;
+  }
+
+  .card-section {
+    align-items: center;
+    padding-left: 5%;
+  }
+
+  .card-overlay {
+    width: 63%;
+  }
+
+  .security-grid {
+    .g1 {
+      width: 16%;
+    }
+    .g2 {
+      .text {
+        width: 76%;
+      }
+    }
+  }
+
+  .grid-section {
+    gap: 1.5rem;
+    .text-align {
+      width: 100%;
+
+      .pgg-h1 {
+        width: 75%;
+        font-size: 2.2rem;
+      }
+
+      .text {
+        width: 65%;
+      }
+    }
+
+    .card-section {
+      padding: 0;
+    }
+
+    .card {
+      &:hover {
+        .hover-img {
+          top: 80%;
+        }
+      }
+
+      .text {
+        width: 82%;
+        font-size: 1.18rem;
+      }
+
+      .pgg-h1 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .bottom {
+    .grid-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pgg-h1 {
+      width: 100%;
+    }
+  }
+
+  .img-container {
+    .g1 {
+      gap: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .grid-containe,
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    width: 85%;
+    .text-content {
+      align-items: center;
+    }
+    .img-container {
+      max-width: 100%;
+
+      
+    }
+    .grid-section {
+      display: flex;
+      flex-direction: column-reverse;
+      max-width: 55%;
+      margin: auto;
+      text-align: center;
+      align-items: center;
+    }
+
+    .mid-content {
+      .text {
+        width: 93%;
+      }
+    }
+  }
+}

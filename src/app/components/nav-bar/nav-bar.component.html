@@ -1,0 +1,16 @@
+<nav [ngClass]="{ 'scrolled': isScrolled }">
+  <div class="inner-container">
+    <div class="logo-nav-container">
+      <a href="" class="logo">
+        <img src="../../../assets/logo.svg" alt=""/>
+      </a>
+      <div class="nav-contents" *ngFor="let nav of navItems">
+        {{ nav.name }}
+      </div>
+    </div>
+    <div class="btn-container">
+      <div class="btn-outlined">Sign in</div>
+      <div class="btn-filled" >Create free account</div>
+    </div>
+  </div>
+</nav>

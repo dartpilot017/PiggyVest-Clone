@@ -18,21 +18,26 @@ export class NavBarMobileComponent {
     this.isNavbarOpen = !this.isNavbarOpen;
   }
 
-  navItems: { name: string }[] = [
+  navItems: { name: string; link: string }[] = [
     {
       name: 'Save',
+      link: 'https://www.piggyvest.com/#save',
     },
     {
+      link: 'https://www.piggyvest.com/invest',
       name: 'Invest',
     },
     {
       name: 'Stories',
+      link: 'https://www.piggyvest.com/stories',
     },
     {
       name: 'FAQs',
+      link: 'https://www.piggyvest.com/faq',
     },
     {
       name: 'Resources',
+      link: '',
     },
   ];
 

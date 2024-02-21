@@ -68,14 +68,21 @@
     <div class="content-container" [ngClass]="{ open: isNavbarOpen }">
       <div class="nav-contents">
         <a
+        [href]="item.link"
           *ngFor="let item of navItems"
           class="nav-link"
           (click)="handleNavItemAction(item)"
           >{{ item.name }}</a
         >
         <div class="btn-container">
-          <div class="btn-outlined">Sign in</div>
-          <div class="btn-filled">Create free account</div>
+          <div class="btn-outlined">
+            <a href="https://dashboard.piggyvest.com/login"> Sign in </a>
+          </div>
+          <div class="btn-filled">
+            <a href="https://dashboard.piggyvest.com/register">
+              Create free account
+            </a>
+          </div>
         </div>
       </div>
     </div>

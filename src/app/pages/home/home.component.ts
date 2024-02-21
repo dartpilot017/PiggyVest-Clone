@@ -28,7 +28,7 @@ export class HomeComponent {
     {
       header: 'Automated Savings',
       paragraph:
-        'Build a dedicated savings faster on your terms, automatically or manually.',
+        'Build a dedicated \n savings faster on your terms, automatically or manually.',
       bottom: 'Piggybank',
       imgPATH: '../../../assets/home/hover-img/piggy.avif',
       bg: '#0f60d6',

@@ -3,7 +3,7 @@
 .padding-top {
   display: flex;
   flex-direction: column;
-  padding-top: 20%;
+  padding-top: 5%;
   background: $piggy-bg-color;
 }
 
@@ -566,6 +566,11 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+
+  .padding-top {
+    padding-top: 20%;
+  }
+
   .grid-container,
   .grid-section {
     grid-template-columns: 1fr;

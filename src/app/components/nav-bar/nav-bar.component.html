@@ -1,16 +1,24 @@
-<nav [ngClass]="{ 'scrolled': isScrolled }">
+<nav [ngClass]="{ scrolled: isScrolled }">
   <div class="inner-container">
     <div class="logo-nav-container">
       <a href="" class="logo">
-        <img src="../../../assets/logo.svg" alt=""/>
+        <img src="../../../assets/logo.svg" alt="" />
       </a>
       <div class="nav-contents" *ngFor="let nav of navItems">
-        {{ nav.name }}
+        <a [href]="nav.link">
+          {{ nav.name }}
+        </a>
       </div>
     </div>
     <div class="btn-container">
-      <div class="btn-outlined">Sign in</div>
-      <div class="btn-filled" >Create free account</div>
+      <div class="btn-outlined">
+        <a href="https://dashboard.piggyvest.com/login"> Sign in </a>
+      </div>
+      <div class="btn-filled">
+        <a href="https://dashboard.piggyvest.com/register">
+          Create free account
+        </a>
+      </div>
     </div>
   </div>
 </nav>

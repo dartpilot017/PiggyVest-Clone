@@ -197,7 +197,7 @@ footer {
   gap: 1rem;
 }
 
-@media screen and (max-width: 993px) {
+@media screen and (max-width: $mobile-width) {
   .footer {
     display: flex;
     background: linear-gradient(

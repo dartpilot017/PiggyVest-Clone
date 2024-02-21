@@ -4,30 +4,31 @@ import { Component, HostListener } from '@angular/core';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   templateUrl: './nav-bar.component.html',
-  styleUrls: [
-    './nav-bar.component.scss',
-  ],
+  styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent {
-  navItems: { name: string }[] = [
+  navItems: { name: string; link: string }[] = [
     {
       name: 'Save',
+      link: 'https://www.piggyvest.com/#save',
     },
     {
+      link: 'https://www.piggyvest.com/invest',
       name: 'Invest',
     },
     {
       name: 'Stories',
+      link: 'https://www.piggyvest.com/stories',
     },
     {
       name: 'FAQs',
+      link: 'https://www.piggyvest.com/faq',
     },
     {
       name: 'Resources',
+      link: '',
     },
   ];
 
@@ -35,7 +36,11 @@ export class NavBarComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
     this.isScrolled = scrollPosition > 0;
   }
 }

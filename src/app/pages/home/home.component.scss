@@ -7,6 +7,17 @@
   background: $piggy-bg-color;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+  // margin: 0;
+  width: 100%;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .top {
   display: flex;
   flex-direction: column;
@@ -439,6 +450,10 @@ img {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
+    a {
+      color: $piggy-black-text;
+    }
   }
 
   .pgg-h1 {

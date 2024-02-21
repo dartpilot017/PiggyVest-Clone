@@ -440,9 +440,11 @@ img {
     align-items: center;
     background: #fff;
     padding: 1.1%;
+    width: 50rem;
 
     iframe {
       border-radius: 1.4rem;
+      width: 100%;
     }
   }
 
@@ -556,6 +558,13 @@ img {
     .pgg-h1 {
       width: 100%;
     }
+
+    .img-container {
+      width: 42rem;
+      iframe {
+        width: 100%;
+      }
+    }
   }
 
   .img-container {
@@ -565,7 +574,7 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile-width) {
   .padding-top {
     padding-top: 20%;
   }

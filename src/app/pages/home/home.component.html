@@ -10,16 +10,24 @@
           </p>
           <div class="btn-container">
             <div class="btn-filled">
-              <div class="content">
+              <a
+                class="content"
+                href="https://apps.apple.com/ng/app/piggyvest/id1263117994"
+                alt=""
+              >
                 <img src="../../../assets/home/apple-logo.svg" alt="" />
                 <p>Get on iPhone</p>
-              </div>
+              </a>
             </div>
             <div class="btn-filled">
-              <div class="content">
+              <a
+                class="content"
+                href="https://play.google.com/store/apps/details?id=com.piggybankng.piggy"
+                alt=""
+              >
                 <img src="../../../assets/home/play-store-logo.svg" alt="" />
                 <p>Get on Android</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -81,7 +89,9 @@
                 stroke-linejoin="round"
               ></path>
             </svg>
-            <h3>More on our security measures</h3>
+            <a href="https://www.piggyvest.com/security">
+              <h3>More on our security measures</h3>
+            </a>
           </div>
         </div>
       </div>
@@ -93,75 +103,80 @@
           </p>
         </div>
         <div class="card-section" *ngFor="let content of cardItems">
-          <div
-            class="card"
-            [ngStyle]="{ background: content.isHovered ? content.bg : '#fff' }"
-            (mouseenter)="onCardMouseEnter(content)"
-            (mouseleave)="onCardMouseLeave(content)"
-          >
-            <div class="text-container">
-              <h1
-                class="pgg-h1"
-                [ngStyle]="{ color: content.isHovered ? '#fff' : content.bg }"
-                (mouseenter)="onCardMouseEnter(content)"
-                (mouseleave)="onCardMouseLeave(content)"
-              >
-                {{ content.header }}
-              </h1>
-              <p
-                class="text"
-                [ngStyle]="{ color: content.isHovered ? '#fff' : '#0d1925' }"
-                (mouseenter)="onCardMouseEnter(content)"
-                (mouseleave)="onCardMouseLeave(content)"
-              >
-                {{ content.paragraph }}
-              </p>
-            </div>
-            <div class="icon-text">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  [ngStyle]="{
-                    stroke: content.isHovered ? '#fff' : content.bg
-                  }"
+          <a [href]="content.link">
+            <div
+              class="card"
+              [ngStyle]="{
+                background: content.isHovered ? content.bg : '#fff'
+              }"
+              (mouseenter)="onCardMouseEnter(content)"
+              (mouseleave)="onCardMouseLeave(content)"
+            >
+              <div class="text-container">
+                <h1
+                  class="pgg-h1"
+                  [ngStyle]="{ color: content.isHovered ? '#fff' : content.bg }"
                   (mouseenter)="onCardMouseEnter(content)"
                   (mouseleave)="onCardMouseLeave(content)"
-                  d="M15 10L20 15L15 20"
-                  stroke="#122231"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  [ngStyle]="{
-                    stroke: content.isHovered ? '#fff' : content.bg
-                  }"
+                  (click)="handleCardClick(content.link)"
+                >
+                  {{ content.header }}
+                </h1>
+                <p
+                  class="text"
+                  [ngStyle]="{ color: content.isHovered ? '#fff' : '#0d1925' }"
                   (mouseenter)="onCardMouseEnter(content)"
                   (mouseleave)="onCardMouseLeave(content)"
-                  d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20"
-                  stroke="#122231"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <h3
-                [ngStyle]="{ color: content.isHovered ? '#fff' : content.bg }"
-                (mouseenter)="onCardMouseEnter(content)"
-                (mouseleave)="onCardMouseLeave(content)"
-              >
-                {{ content.bottom }}
-              </h3>
+                >
+                  {{ content.paragraph }}
+                </p>
+              </div>
+              <div class="icon-text">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    [ngStyle]="{
+                      stroke: content.isHovered ? '#fff' : content.bg
+                    }"
+                    (mouseenter)="onCardMouseEnter(content)"
+                    (mouseleave)="onCardMouseLeave(content)"
+                    d="M15 10L20 15L15 20"
+                    stroke="#122231"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    [ngStyle]="{
+                      stroke: content.isHovered ? '#fff' : content.bg
+                    }"
+                    (mouseenter)="onCardMouseEnter(content)"
+                    (mouseleave)="onCardMouseLeave(content)"
+                    d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20"
+                    stroke="#122231"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <h3
+                  [ngStyle]="{ color: content.isHovered ? '#fff' : content.bg }"
+                  (mouseenter)="onCardMouseEnter(content)"
+                  (mouseleave)="onCardMouseLeave(content)"
+                >
+                  {{ content.bottom }}
+                </h3>
+              </div>
+              <div class="hover-img">
+                <img [src]="content.imgPATH" alt="" />
+              </div>
             </div>
-            <div class="hover-img">
-              <img [src]="content.imgPATH" alt="" />
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -208,7 +223,9 @@
                   stroke-linejoin="round"
                 ></path>
               </svg>
-              <h3>Learn about investments</h3>
+              <a href="https://www.piggyvest.com/invest">
+                <h3>Learn about investments</h3>
+              </a>
             </div>
           </div>
           <div class="g1">
@@ -249,7 +266,7 @@
           </h1>
           <div class="btn-container">
             <div class="btn-outlined">
-              <div class="content">
+              <a href="https://apps.apple.com/ng/app/piggyvest/id1263117994" class="content">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="37"
@@ -267,13 +284,13 @@
                   />
                 </svg>
                 <p>Get on iPhone</p>
-              </div>
+              </a>
             </div>
             <div class="btn-outlined">
-              <div class="content">
+              <a href="https://play.google.com/store/apps/details?id=com.piggybankng.piggy" class="content">
                 <img src="../../../assets/home/play-store-logo.svg" alt="" />
                 <p>Get on Android</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>

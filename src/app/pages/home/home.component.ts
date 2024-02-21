@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,14 @@ export class HomeComponent {
     card.isHovered = false;
   }
 
+  constructor(private router: Router) {}
+
+  handleCardClick(link: string): void {
+    if (link) {
+      window.open(link, '_blank'); // Opens the link in a new tab/window
+    }
+  }
+
   cardItems: {
     header: string;
     paragraph: string;
@@ -24,6 +33,7 @@ export class HomeComponent {
     imgPATH: string;
     bg: string;
     isHovered: boolean;
+    link: string;
   }[] = [
     {
       header: 'Automated Savings',
@@ -33,6 +43,7 @@ export class HomeComponent {
       imgPATH: '../../../assets/home/hover-img/piggy.avif',
       bg: '#0f60d6',
       isHovered: false,
+      link: 'https://www.piggyvest.com/piggybank',
     },
     {
       header: 'Fixed Savings',
@@ -42,6 +53,7 @@ export class HomeComponent {
       imgPATH: '../../../assets/home/hover-img/save.avif',
       bg: '#2296F2',
       isHovered: false,
+      link: 'https://www.piggyvest.com/safelock',
     },
     {
       header: 'Goal-Oriented \nSavings',
@@ -51,6 +63,7 @@ export class HomeComponent {
       imgPATH: '../../../assets/home/hover-img/safelock.avif',
       bg: '#39c277',
       isHovered: false,
+      link: 'https://www.piggyvest.com/targets',
     },
     {
       header: 'Flex Naira',
@@ -60,6 +73,7 @@ export class HomeComponent {
       imgPATH: '../../../assets/home/hover-img/flex.avif',
       bg: '#e5489b',
       isHovered: false,
+      link: 'https://www.piggyvest.com/flex-naira',
     },
     {
       header: 'Flex Dollar',
@@ -69,6 +83,7 @@ export class HomeComponent {
       imgPATH: '../../../assets/home/hover-img/flex-d.avif',
       bg: '#0c1825',
       isHovered: false,
+      link: 'https://www.piggyvest.com/flex-dollar',
     },
   ];
 }

@@ -638,10 +638,14 @@ img {
     .grid-section {
       display: flex;
       flex-direction: column-reverse;
-      max-width: 55%;
+      max-width: 90%;
       margin: auto;
       text-align: center;
       align-items: center;
+
+      img {
+        width: 80%;
+      }
     }
 
     .mid-content {
